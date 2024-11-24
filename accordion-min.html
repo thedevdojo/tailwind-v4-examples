@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css" />
+
+    <title>Vite + TS</title>
+</head>
+
+<body>
+    <div class="w-screen h-dvh max-w-md mx-auto group flex space-y-2 flex-col items-center justify-center">
+        <details class="w-full text-sm group border border-gray-200 rounded-lg p-3
+                [&::details-content]:block,overflow-hidden
+                [&::details-content]:overflow-hidden
+                [&::details-content]:[block-size:0]
+                [&::details-content]:transition-all
+                [&::details-content]:transition-discrete
+                [&::details-content]:ease-out
+                [&::details-content]:duration-500
+                open:[&::details-content]:[block-size:auto]
+                open:[&::details-content]:[block-size:calc-size(auto,size)]">
+            <summary class="list-none cursor-pointer">
+                The Detail Title
+            </summary>
+            <p class="pt-3 opacity-60">The long detail content goes here.</p>
+        </details>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

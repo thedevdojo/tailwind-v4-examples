@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css" />
+
+    <title>Vite + TS</title>
+</head>
+
+<body>
+    <div class="w-screen h-dvh max-w-md mx-auto group flex space-y-2 flex-col items-center justify-center">
+        <details class="w-full text-sm group border border-gray-200 hover:shadow-sm ease-out duration-300 rounded-lg p-3
+                [&::details-content]:block
+                [&::details-content]:overflow-hidden
+                [&::details-content]:[block-size:0]
+                [&::details-content]:transition-all
+                [&::details-content]:transition-discrete
+                [&::details-content]:ease-out
+                [&::details-content]:duration-500
+                open:[&::details-content]:[block-size:auto]
+                open:[&::details-content]:[block-size:calc-size(auto,size)]">
+            <summary class="flex  items-center justify-between list-none cursor-pointer">
+                <span>🔖<span class="ml-2 font-medium">The Details Tag</span></span>
+                <span class="group-open:rotate-180 ease duration-300 opacity-60">↓</span>
+            </summary>
+            <div class="pt-3 opacity-60">The details tag is used to create a collapsible section. You can then include
+                the title inside of a summary tag.</div>
+        </details>
+
+        <details class="w-full text-sm group border border-gray-200 hover:shadow-sm ease-out duration-300 rounded-lg p-3
+                [&::details-content]:block
+                [&::details-content]:overflow-hidden
+                [&::details-content]:[block-size:0]
+                [&::details-content]:transition-all
+                [&::details-content]:transition-discrete
+                [&::details-content]:ease-out
+                [&::details-content]:duration-500
+                open:[&::details-content]:[block-size:auto]
+                open:[&::details-content]:[block-size:calc-size(auto,size)]">
+            <summary class="flex  items-center justify-between list-none cursor-pointer">
+                <span>✈️<span class="ml-2 font-medium">Combined with Tailwind</span></span>
+                <span class="group-open:rotate-180 ease duration-300 opacity-60">↓</span>
+            </summary>
+            <div class="pt-3 opacity-60">We can easily create a great looking collapsible section that also includes the
+                slide down animation.</div>
+        </details>
+
+        <details class="w-full text-sm group border border-gray-200 hover:shadow-sm ease-out duration-300 rounded-lg p-3
+                [&::details-content]:block
+                [&::details-content]:overflow-hidden
+                [&::details-content]:[block-size:0]
+                [&::details-content]:transition-all
+                [&::details-content]:transition-discrete
+                [&::details-content]:ease-out
+                [&::details-content]:duration-500
+                open:[&::details-content]:[block-size:auto]
+                open:[&::details-content]:[block-size:calc-size(auto,size)]">
+            <summary class="flex  items-center justify-between list-none cursor-pointer">
+                <span>👨‍💻<span class="ml-2 font-medium">The Code Is Simple</span></span>
+                <span class="group-open:rotate-180 ease duration-300 opacity-60">↓</span>
+            </summary>
+            <div class="pt-3 opacity-60">Creating this simple collapsible section is very simple and doesn't even
+                require any javascript.</div>
+        </details>
+
+        <!-- Uncomment javascript below to make the accordion only open one at a time -->
+
+        <!-- <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const details = document.querySelectorAll('details');
+                
+                details.forEach((targetDetail) => {
+                    targetDetail.addEventListener('toggle', () => {
+                        // Only run this code when a details element is being opened
+                        if (targetDetail.open) {
+                            // Close all other details
+                            details.forEach((detail) => {
+                                if (detail !== targetDetail && detail.open) {
+                                    detail.open = false;
+                                }
+                            });
+                        }
+                    });
+                });
+            });
+        </script> -->
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

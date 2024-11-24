@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css" />
+
+    <title>Vite + TS</title>
+</head>
+
+<body>
+    <div class="w-screen h-dvh group flex items-center justify-center">
+        <input type="checkbox" id="modal" class="hidden peer" />
+        <div
+            class="w-screen 
+            perspective-distant
+            [&>div]:hidden
+            peer-checked:[&>div]:block
+            peer-not-checked:[&>div]:scale-90
+            peer-not-checked:[&>div]:opacity-0
+            peer-not-checked:[&>div]:[transition-timing-function:cubic-bezier(0.36,0,0.66,-0.56)]
+            peer-not-checked:[&>div]:rotate-x-40
+            starting:opacity-0 opacity-100 transition-discrete transition-[opacity,display] ease-out duration-500 h-dvh hidden group-has-checked:flex group-not-has-checked:hidden group-not-has-checked:delay-500 group-not-has-checked:opacity-0 items-center justify-center fixed z-20">
+            <label for="modal" class="bg-black/50 w-full h-full absolute inset-0"></label>
+
+            <div class="w-full 
+                    starting:rotate-x-40
+                    transform-3d rotate-x-0
+                    transition-all
+                    transition-discrete transition-[opacity,scale,display,transform-3d]
+                    starting:scale-90 scale-100
+                    transform-origin-center
+                    starting:opacity-0 opacity-100
+                    duration-500
+                    delay-50
+                    translate-y-0
+                    md:max-w-sm bg-white rounded-lg shadow-lg p-6 relative">
+                <div>
+                    <div class="mx-auto flex items-center justify-center">
+                        <svg fill="none" class="size-10" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path clip-rule="evenodd"
+                                d="m12 4c-4.41828 0-8 3.58172-8 8 0 4.4183 3.58172 8 8 8 4.4183 0 8-3.5817 8-8 0-.5143-.0484-1.0163-.1406-1.5021-.103-.54262.2534-1.06598.7959-1.16898.5426-.103 1.066.25337 1.169.79598.1154.6081.1757 1.235.1757 1.8751 0 5.5228-4.4772 10-10 10-5.52285 0-10-4.4772-10-10 0-5.52285 4.47715-10 10-10 1.5947 0 3.1049.37401 4.445 1.04001.4946.24578.6963.84596.4505 1.34054s-.846.69627-1.3405.45048c-1.0698-.53163-2.276-.83103-3.555-.83103zm9.8637.99603c.2783.47705.1172 1.08937-.3599 1.36765l-.2216.12929c-3.5949 2.09702-6.4832 5.21793-8.296 8.96413-.141.2914-.4142.4964-.7333.5504s-.6446-.0497-.8736-.2785l-4.01346-4.0092c-.39073-.3903-.39107-1.0234-.00075-1.4142.39031-.39071 1.02348-.39105 1.41421-.0007l3.0505 3.0473c1.9955-3.55607 4.9079-6.52372 8.4446-8.58679l.2217-.12929c.477-.27828 1.0893-.11714 1.3676.35991z"
+                                fill="rgb(0,0,0)" fill-rule="evenodd"></path>
+                        </svg>
+
+                    </div>
+                    <div class="mt-3 text-center sm:mt-5">
+                        <h3 class="text-base font-semibold text-gray-900" id="modal-title">TailwindCSS Only Modal</h3>
+                        <div class="mt-2">
+                            <p class="text-sm text-gray-500">Includes the new starting style variants as well as
+                                animations and the perspective effect.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-5 sm:mt-6">
+                    <label for="modal"
+                        class="inline-flex w-full cursor-pointer justify-center rounded-md bg-neutral-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-neutral-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900">Awesome</label>
+                </div>
+            </div>
+        </div>
+        <label for="modal"
+            class="starting:translate-y-2 w-auto cursor-pointer starting:opacity-0 opacity-100 duration-300 ease-out peer-checked:opacity-0 inline-flex justify-center rounded-md bg-neutral-900 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-neutral-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900">Open
+            Modal</label>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
